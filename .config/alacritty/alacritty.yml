@@ -899,6 +899,8 @@ shell:
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 
+key_bindings:
+  - { key: F11, action: ToggleFullscreen }
 #debug:
   # Display the time it takes to redraw each frame.
   #render_timer: false
