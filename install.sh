@@ -1,4 +1,6 @@
-#/usr/bin/env zsh
+#!/usr/bin/env zsh
+
+SCRIPT_DIR=$(cd -P -- "$(dirname -- "$0")" && printf '%s\n' "$(pwd -P)")
 
 require() {
     ret=0
@@ -9,6 +11,15 @@ require() {
         fi
     done
     return $ret
+}
+
+install_deps() {
+    if type apk > /dev/null; then
+        echo apkl;
+    elif type yum > /dev/null; then
+        echo yum;
+    elif type pacman > /dev/null; then
+    fi
 }
 
 require git bash tmux zsh wget tar
@@ -22,10 +33,9 @@ echo "WARNING: By continuing, this might override some existing configs."
 echo "Please type 'continue' to proceed or 'abort' to exit the script."
 
 # Read user input
-read -p "Enter your choice: " user_choice
+read "?Enter your choice: " user_choice
 
 install() {
-    SCRIPT_DIR=$(cd -P -- "$(dirname -- "$0")" && printf '%s\n' "$(pwd -P)")
     cp ${SCRIPT_DIR}/.zshrc ${HOME}/.zshrc
     mkdir -p ${HOME}/.config/tmux
     cp ${SCRIPT_DIR}/.config/tmux/tmux.conf ${HOME}/.config/tmux
@@ -35,6 +45,9 @@ install() {
     fi
     cp -R ${SCRIPT_DIR}/.config/nvim ${HOME}/.config/nvim
     cp -R ${SCRIPT_DIR}/.config/alacritty ${HOME}/.config/alacritty
+    mkdir -p ${HOME}/.config/zsh
+    URL=https://github.com/zsh-users/zsh-syntax-highlighting/archive/master.tar.gz
+    wget ${URL} -O - | tar -xzf - -C ${HOME}/.config/zsh
     echo "Done"
 }
 
