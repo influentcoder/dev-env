@@ -27,6 +27,10 @@ alias ls="ls --color=auto"
 # See: https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
 PROMPT='%F{cyan}%n%f@%F{green}%m:%F{yellow}%~%f $ '
 
+if [ -f ${HOME}/.envvars ]; then
+    source ${HOME}/.envvars
+fi
+
 # Needs to be at the bottom!
 # See: https://github.com/zsh-users/zsh-syntax-highlighting
 source ${HOME}/.config/zsh/zsh-syntax-highlighting-master/zsh-syntax-highlighting.zsh
