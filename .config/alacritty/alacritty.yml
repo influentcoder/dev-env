@@ -22,6 +22,8 @@
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
+env:
+  WINIT_X11_SCALE_FACTOR: "1"
 
 #window:
   # Window dimensions (changes require restart)
@@ -114,7 +116,7 @@
   #option_as_alt: None
 
 window:
-  startup_mode: fullscreen
+  startup_mode: Fullscreen
 
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
