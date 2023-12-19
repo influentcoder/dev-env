@@ -903,6 +903,11 @@ shell:
 
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
+  - { key: PageUp, action: ScrollLineUp }
+  - { key: PageDown, action: ScrollLineDown }
+  - { key: PageUp, mods: Control, action: ScrollPageUp }
+  - { key: PageDown, mods: Control, action: ScrollPageDown }
+
 #debug:
   # Display the time it takes to redraw each frame.
   #render_timer: false
