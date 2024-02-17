@@ -3,12 +3,12 @@
 set -e
 
 # Alpine
-if type apk > /dev/null; then
+if type apk > /dev/null 2>&1; then
     apk update
     apk upgrade
     apk add zsh git bash tmux wget tar neovim clang-extra-tools
 # RHEL
-elif type yum > /dev/null; then
+elif type yum > /dev/null 2>&1; then
     yum -y update
     yum -y install zsh git bash wget tar clang-tools-extra
     yum -y install http://galaxy4.net/repo/galaxy4-release-8-current.noarch.rpm
@@ -26,11 +26,11 @@ elif type yum > /dev/null; then
     ln -s /squashfs-root/AppRun /usr/bin/nvim
     rm nvim.appimage
 # Arch
-elif type pacman > /dev/null; then
+elif type pacman > /dev/null 2>&1; then
     pacman -Sy
-    pacman -S zsh git bash tmux wget tar neovim clang
+    pacman -S --needed zsh git bash tmux wget tar neovim clang
 # Debian / Ubuntu
-elif type apt-get > /dev/null; then
+elif type apt-get > /dev/null 2>&1; then
     apt-get update
     apt-get -y upgrade
     apt-get -y install zsh git bash tmux wget tar clangd curl
