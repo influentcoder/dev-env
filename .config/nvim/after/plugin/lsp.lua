@@ -7,3 +7,16 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 require('lspconfig').clangd.setup({})
+
+require'lspconfig'.pylsp.setup{
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 100
+        }
+      }
+    }
+  }
+}
