@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Alacritty
+Exec=${HOME}/.local/bin/alacritty
+Icon=${HOME}/.local/share/icons/hicolor/64x64/apps/alacritty-term.png
+Terminal=false
+Categories=System;TerminalEmulator;

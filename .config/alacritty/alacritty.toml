@@ -39,8 +39,10 @@ action = "ScrollPageDown"
 key = "PageDown"
 mods = "Control"
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 
 [window]
 startup_mode = "Fullscreen"
+
+[terminal]

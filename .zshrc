@@ -33,4 +33,4 @@ fi
 
 # Needs to be at the bottom!
 # See: https://github.com/zsh-users/zsh-syntax-highlighting
-source ${HOME}/.config/zsh/zsh-syntax-highlighting-master/zsh-syntax-highlighting.zsh
+source ${HOME}/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
