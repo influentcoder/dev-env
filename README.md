@@ -42,7 +42,7 @@ Create symlinks:
 ln -s ~/dev-env/.config/alacritty ~/.config/alacritty
 ln -s ~/dev-env/alacritty.desktop ~/.local/share/applications/alacritty.desktop
 ln -s ~/dev-env/.config/gdb ~/.config/gdb
-ln -s ~/dev-env/.config/tmux ~/.config/tmux
+mkdir -p ~/.local/share/tmux/plugins && git clone https://github.com/tmux-plugins/tpm ~/.local/share/tmux/plugins/tpm
 ln -s ~/dev-env/.zshrc ~/.zshrc
 ```
 
@@ -103,3 +103,9 @@ podman cp tmux_build:/workspace/tmux-3.5a/tmux ~/.local/bin/
 ```
 
 You can now exit the container.
+
+Install tpm:
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+```
