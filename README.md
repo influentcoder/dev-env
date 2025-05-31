@@ -109,3 +109,11 @@ Install tpm:
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
+
+## Gnome Utils
+
+Disable hot corners (e.g. Activities overview when the mouse reaches the top-left corner):
+
+```bash
+gsettings set org.gnome.desktop.interface enable-hot-corners false
+```
