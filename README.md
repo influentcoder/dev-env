@@ -17,7 +17,7 @@ git clone git@github.com:influentcoder/dev-env.git
 
 Run a container, name it `dev-container` and follow the steps to compile Alacritty: https://github.com/alacritty/alacritty/blob/master/INSTALL.md
 
-Then copy the `alacritty` binary to `${HOME}/.local/bin`.
+Then copy the `alacritty` binary to `~/.local/bin`, and the icon to `~/.local/share/icons/hicolor/64x64/apps/alacritty-term.png`
 
 In the container, download an unzip the font:
 
