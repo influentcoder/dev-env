@@ -74,6 +74,14 @@ Edit `/etc/gdm3/daemon.conf` and make sure that `WaylandEnable=false`.
 
 Then run `sudo systemctl restart gdm` (this will logout). If still not working, try to reboot.
 
+Also to fix middle-click paste, edit `~/.ICAClient/wfclient.ini` and make sure that:                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                         
+```                                                                                                                                                                                                                                                                                      
+MouseSendsControlV=False                                                                                                                                                                                                                                                                 
+```                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                         
+Might be worth checking `All_Regions.ini` also.
+
 ## Zoom
 
 Just use the webapp: https://app.zoom.us/wc/
