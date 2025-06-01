@@ -1,8 +1,10 @@
 Install packages:
 
 ```bash
-apt install git podman vim zsh
+apt install fd-find git podman ripgrep vim zsh
 ```
+
+* `fd-find` and `ripgrep` are used for Telescope.nvim and are good general tools anyway.
 
 Setup the SSH keys in `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`.
 
