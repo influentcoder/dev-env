@@ -127,3 +127,38 @@ Disable hot corners (e.g. Activities overview when the mouse reaches the top-lef
 ```bash
 gsettings set org.gnome.desktop.interface enable-hot-corners false
 ```
+
+## Network
+
+It's possible that the Wifi network interface goes to sleep after a while, making the first connection quite slow after idle time.
+
+To fix that, as root, check if the power management is enabled:
+
+```bash
+iw dev wlp0s20f3 get power_save
+```
+
+Or alternatively:
+
+```bash
+iwconfig
+```
+
+It's possible that you need to install `net-tools` package.
+
+To fix, as root, create or edit:
+
+```bash
+mkdir -p /etc/NetworkManager/conf.d
+vim /etc/NetworkManager/conf.d/wifi-powersave.conf
+```
+
+Add:
+
+```
+[connection]
+wifi.powersave = 2
+```
+
+Reboot and check the settings again.
+
