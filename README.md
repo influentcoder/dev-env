@@ -162,3 +162,8 @@ wifi.powersave = 2
 
 Reboot and check the settings again.
 
+## Mousepad right-click
+
+If the mousepad right-click doesn't work in Gnome, go to Tweaks -> Keyboard & Mouse -> Mouse Click Emulation and set it to "Area".
+
+See https://unix.stackexchange.com/questions/531168/how-to-enable-trackpad-right-button-in-gnome-debian-10-buster
