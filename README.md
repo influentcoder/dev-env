@@ -46,6 +46,7 @@ ln -s ~/dev-env/alacritty.desktop ~/.local/share/applications/alacritty.desktop
 ln -s ~/dev-env/.config/gdb ~/.config/gdb
 mkdir -p ~/.local/share/tmux/plugins && git clone https://github.com/tmux-plugins/tpm ~/.local/share/tmux/plugins/tpm
 ln -s ~/dev-env/.zshrc ~/.zshrc
+ln -s ~/dev-env/.envvars ~/.envvars
 ```
 
 Plugins for zsh:
@@ -53,6 +54,21 @@ Plugins for zsh:
 ```bash
 mkdir -p ~/.config/zsh
 git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/zsh-syntax-highlighting
+```
+
+# LSP
+
+## LUA
+
+```bash
+cp /tmp
+mkdir lua-language-server && cd lua-language-server
+curl -L -o lua-language-server.tar.gz https://github.com/LuaLS/lua-language-server/releases/download/3.15.0/lua-language-server-3.15.0-linux-x64.tar.gz
+tar -xzf lua-language-server.tar.gz
+rm lua-language-server.tar.gz
+mkdir -p ${HOME}/lsp
+cd .. && mv lua-language-server ${HOME}/lsp/
+mkdir -p ${HOME}/.local/bin && ln -s ${HOME}/lsp/lua-language-server/bin/lua-language-server ${HOME}/.local/bin/lua-language-server
 ```
 
 ## Citrix Workspace
