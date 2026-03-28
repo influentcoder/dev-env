@@ -38,6 +38,8 @@ ln -s ~/dev-env/alacritty.desktop ~/.local/share/applications/alacritty.desktop
 
 ## Nerd Fonts
 
+To test: `echo -e "\uf308"` (Should show a Linux/Tux icon)
+
 ### Linux
 
 ```bash
@@ -53,6 +55,19 @@ rm JetBrainsMono.zip
 * Download the font: https://www.nerdfonts.com/font-downloads
 * Unzip it, select all the `.ttf` files, and then install for all users
 
+### MacOS
+
+```bash
+brew install --cask font-jetbrains-mono-nerd-font
+```
+
+* Open Terminal
+* Go to Settings (⌘ + ,) > Profiles
+* Select your active profile on the left (e.g., "Pro" or "Basic").
+* Click the Text tab on the right.
+* Under Font, click Change.
+* Search for "JetBrainsMono Nerd Font" and select it.
+** Note: Ensure you select the one with "Nerd Font" in the name, otherwise your icons (like the GitHub logo or folder icons) won't render.
 
 ## Dev Setup
 
