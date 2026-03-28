@@ -7,7 +7,7 @@ apt install fd-find git podman ripgrep vim zsh make gcc libclang-dev clang
 ```
 
 ```bash
-brew install fd git podman ripgrep vim make gcc llvm
+brew install fd git podman ripgrep vim make gcc llvm ghostty
 ```
 
 * `fd-find` and `ripgrep` are used for Telescope.nvim and are good general tools anyway.
@@ -36,9 +36,29 @@ ln -s ~/dev-env/.config/alacritty ~/.config/alacritty
 ln -s ~/dev-env/alacritty.desktop ~/.local/share/applications/alacritty.desktop
 ```
 
+## Ghostty in MacOS
+
+Create `~/.config/ghostty/config`.
+
+```
+# Font Settings
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
+
+# Theme (Ghostty has Catppuccin built-in!)
+theme = catppuccin-mocha
+
+# Window Decorations
+window-decoration = true
+macos-option-as-alt = left
+
+# Mouse Support for Tmux
+mouse-shift-capture = true
+```
+
 ## Nerd Fonts
 
-To test: `echo -e "\uf308"` (Should show a Linux/Tux icon)
+To test: `echo -e "\uf308"` (Should show a Docker/whale icon)
 
 ### Linux
 
@@ -119,6 +139,8 @@ brew install lua-language-server
 
 ## Tmux
 
+### Linux
+
 In one terminal:
 
 ```bash
@@ -143,10 +165,22 @@ podman cp tmux_build:/workspace/tmux-3.6a/tmux ~/.local/bin/
 
 You can now exit the container.
 
-Install tpm:
+### MacOS
+
+```bash
+brew install tmux
+```
+
+### TPM
 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+```
+
+### Config
+
+```bash
+ln -s ~/dev-env/.config/tmux/tmux.conf ~/.config/tmux/tmux.conf
 ```
 
 ## Linux Specifics
