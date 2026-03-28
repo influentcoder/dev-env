@@ -98,6 +98,8 @@ chsh -s $(which zsh)
 
 ## LUA
 
+### Linux
+
 ```bash
 cp /tmp
 mkdir lua-language-server && cd lua-language-server
@@ -107,6 +109,12 @@ rm lua-language-server.tar.gz
 mkdir -p ${HOME}/lsp
 cd .. && mv lua-language-server ${HOME}/lsp/
 mkdir -p ${HOME}/.local/bin && ln -s ${HOME}/lsp/lua-language-server/bin/lua-language-server ${HOME}/.local/bin/lua-language-server
+```
+
+### MacOS
+
+```bash
+brew install lua-language-server
 ```
 
 ## Tmux
